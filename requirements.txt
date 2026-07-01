@@ -1,0 +1,14 @@
+# Afhankelijkheden voor de uitspraken-export.
+# HTTP, XML, e-mail (.eml) en de GUI zitten in de Python-standaardbibliotheek.
+#
+# Installeren:  pip install -r requirements.txt
+
+pypdf>=5.0          # leest bron-PDF's (tekst + hyperlink-annotaties)
+reportlab>=4.0      # schrijft de uitspraak-PDF's (met voorblad, Verdana)
+
+# --- Optioneel (alleen voor extra gemak; de tool werkt ook zonder) ----------
+# extract-msg       # nodig om Outlook .msg-bestanden te lezen
+#                   # (zonder dit pakket: bewaar de mail als .eml of .pdf)
+# tkinterdnd2       # om bestanden IN het venster te kunnen slepen
+#                   # (zonder dit pakket: gebruik 'Bestanden toevoegen', of
+#                   #  sleep op het .exe-icoon)
