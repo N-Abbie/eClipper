@@ -1,9 +1,6 @@
 # Uitspraken-export — uitsprakenoverzicht → losse PDF's (met voorblad)
 
-Een programma dat een bron met ECLI-uitspraken inleest (een L&S-kwartaaloverzicht,
-een ander PDF met links naar rechtspraak.nl, of een e-mail), elke uitspraak ophaalt
-bij de Rechtspraak en als losse, doorzoekbare PDF opslaat —  met een **voorblad**
-dat de basisgegevens en (bij het L&S-overzicht) de **samenvatting** bevat.
+Een programma dat een bestand met ECLI-uitspraken inleest (bijvoorbeeld een mailoverzicht of een pdf nieuwsbrief), elke uitspraak ophaalt bij de Rechtspraak en als losse, doorzoekbare PDF opslaat.
 
 Bestandsnaam: **`YYYYMMDD_Instantie_Titel.pdf`**.
 
@@ -22,7 +19,7 @@ Volgende keer hoef je alleen de nieuwe bron te kiezen (of erop te slepen) en op
 3. Maakt van elke uitspraak een **doorzoekbare PDF** met:
    - een **voorblad**: naam, instantie, datum uitspraak, **datum publicatie**,
      zaaknummer, rechtsgebied, ECLI, bronlink, en — als de bron een
-     L&S-uitsprakenoverzicht is — de **samenvatting** (met behoud van vet/cursief)
+     uitsprakenoverzicht is — de **samenvatting** (met behoud van vet/cursief)
      plus *"Samenvatting door [advocaat, kantoor]"*;
    - daarna de **volledige uitspraaktekst** + officiële inhoudsindicatie.
 4. Slaat die op als `YYYYMMDD_Instantie_Titel.pdf` in je gekozen map.
@@ -31,21 +28,14 @@ Volgende keer hoef je alleen de nieuwe bron te kiezen (of erop te slepen) en op
 Het standaardlettertype is **Verdana 10** (op Windows automatisch aanwezig; op
 andere systemen valt het terug op DejaVuSans en anders Helvetica).
 
-> **Waarom de Open Data-service en niet de "deel → PDF"-knop van de website?**
-> De website is een JavaScript-app; die deelknop draait in de browser en is lastig
-> betrouwbaar na te bootsen. De Open Data-service levert exact dezelfde, *officiële*
-> tekst als data. Daardoor krijg je een **echte tekst-PDF** (doorzoekbaar,
-> kopieerbaar) in plaats van een schermafdruk, en breekt het niet als de website
-> verandert.
-
 ---
 
 ## 2. Welke bronnen kun je gebruiken?
 
 | Type            | Extensie            | Bijzonderheden                                    |
 |-----------------|---------------------|---------------------------------------------------|
-| L&S-overzicht   | `.pdf`              | Volledig: voorblad **met** samenvatting + auteur  |
-| Ander PDF       | `.pdf`              | Voorblad met basisgegevens; **geen** samenvatting |
+| nieuwsbriefoverzicht   | `.pdf`              | Volledig: voorblad **met** samenvatting + auteur  |
+| Andere PDF       | `.pdf`              | Voorblad met basisgegevens; **geen** samenvatting |
 | E-mail          | `.eml`              | Links + tekst-ECLI's; werkt out-of-the-box        |
 | Outlook-mail    | `.msg`              | Vereist `extract-msg` (zie §6) — of bewaar als `.eml`/`.pdf` |
 | Webpagina       | `.html` / `.htm`    | Links + zichtbare tekst                            |
